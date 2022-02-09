@@ -4,6 +4,7 @@ let formEl = document.querySelector(".action-form");
 let inputName = document.querySelector(".message__name");
 let inputPhone = document.querySelector(".message__phone");
 let inputEmail = document.querySelector(".message__email");
+let inputComment = document.querySelector(".message__comment");
 
 const nameReg = /^([А-Я][а-яё]{1,23}|[A-Z][a-z]{1,23})$/;
 const emailReg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/i;
@@ -29,6 +30,12 @@ function checkInput(event) {
         inputPhone.style.borderColor = "red";
     } else {
         inputPhone.style.borderColor = "rgb(118, 118, 118)";
+    }
+    if (inputComment.value.trim() === "") {
+        alert("Wrong comment");
+        inputComment.style.borderColor = "red";
+    } else {
+        inputComment.style.borderColor = "rgb(118, 118, 118)";
     }
     event.preventDefault();
 }

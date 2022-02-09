@@ -7,7 +7,7 @@
     padding: 10px;
 }
 
-.message__name, .message__phone, .message__email {
+.message__name, .message__phone, .message__email, .message__comment {
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.04em;
